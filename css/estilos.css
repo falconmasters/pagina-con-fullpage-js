@@ -30,3 +30,320 @@ h1, h2, h3, h4, h5, h6 {
 .texto-negro {
 	color: #000;
 }
+
+/* ------------------------- */
+/* Clases de Fullpage.js */
+/* ------------------------- */
+#fp-nav ul li a span {
+    background: orange;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: orange;
+}
+
+/* ------------------------- */
+/* Menu de Navegacion */
+/* ------------------------- */
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li,
+.nav a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    color: #c2c2c2;
+    transition: .5s ease;
+}
+
+.nav li.active {
+    border-bottom: 2px solid orange;
+}
+
+.menu li a {
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li.active a,
+.menu li:hover a {
+    color: orange;
+}
+
+
+/* ------------------------- */
+/* Header */
+/* ------------------------- */
+.header {
+    background: url('../media/bg-imagen.jpeg');
+    background-position: center;
+}
+
+.header .contenedor-titulo {
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo {
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono {
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+
+/* ------------------------- */
+/* Animaciones */
+/* ------------------------- */
+@keyframes bajar-subir {
+    0% { transform: translateY(20px); }
+    25% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+/* ------------------------- */
+/* Productos */
+/* ------------------------- */
+.productos article { 
+    background-position: center;
+    background-size: cover;
+}
+
+.productos article:nth-child(1) {
+    background-image: url('../media/producto-01.jpg');
+}
+
+.productos article:nth-child(2) {
+    background-image: url('../media/producto-02.jpg');
+}
+
+.productos article:nth-child(3) {
+    background-image: url('../media/producto-03.jpg');
+}
+
+.productos .informacion-producto {
+    margin: 0 30px;
+}
+
+.productos .informacion-producto::before {
+    content: "";
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+
+.productos .modelo {
+    font-size: 45px;
+}
+
+.productos .descripcion {
+    font-size: 22px;
+}
+
+.productos .precio {
+    font-size: 25px;
+}
+
+.productos .precio::before {
+    content: "$";
+    display: inline-block;
+}
+
+/* ------------------------- */
+/* Clases de fullpage.js - Flechas de Slide */
+/* ------------------------- */
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #000 transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 50px;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #000;
+}
+
+/* ------------------------- */
+/* Footer */
+/* ------------------------- */
+.footer .texto-naranja {
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2 {
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+    transition: 1s ease all;
+}
+
+.footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+.footer .redes-sociales a {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    color: #30313A;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+}
+
+.footer .facebook i { color: #3b5998; }
+.footer .twitter i { color: #1da1f2; }
+.footer .instagram i { color: #c13584; }
+
+.footer .facebook:hover { background: #3b5998; }
+.footer .twitter:hover { background: #1da1f2; }
+.footer .instagram:hover { background: #c13584; }
+
+.footer .facebook:hover i { color: #fff; }
+.footer .twitter:hover i { color: #fff; }
+.footer .instagram:hover i { color: #fff; }
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 768px) {
+    .menu li a,
+    .menu li.active a {
+        font-size: 18px;
+    }
+    .modelo {
+        font-size: 40px;
+    }
+    .precio {
+        font-size: 23px;
+    }
+    .footer h2 {
+        font-size: 15px;
+    }
+    .footer .redes-sociales {
+        font-size: 30px;
+    }
+    .footer .redes-sociales a {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer .texto-naranja {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header .titulo {
+        font-size: 60px;
+    }
+
+    .informacion-producto {
+        position: absolute;
+        top: 70%;
+    }
+
+    .fp-controlArrow.fp-next {
+        left: 100px;
+    }
+
+    .fp-controlArrow.fp-prev {
+        left: 25px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav {
+        display: block;
+        text-align: center;
+    }
+
+    .nav a {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li a,
+    .menu li.active a {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .titulo {
+        font-size: 45px;
+    }
+
+    .productos .modelo {
+        font-size: 30px;
+    }
+
+    .footer .texto-naranja {
+        font-size: 18px;
+    }
+
+    .footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer .redes-sociales a i {
+        font-size: 24px;
+    }
+}

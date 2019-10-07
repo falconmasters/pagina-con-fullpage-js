@@ -7,11 +7,88 @@
 	<title>FullPage.js</title>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css">
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-	
+	<nav class="nav">
+		<a href="#inicio" class="marca">Olympia</a>
+		<ul id="menu" class="menu">
+			<li data-menuanchor="inicio" class="active">
+				<a href="#inicio">Inicio</a>
+			</li>
+			<li data-menuanchor="productos">
+				<a href="#productos">Productos</a>
+			</li>
+			<li data-menuanchor="contacto">
+				<a href="#contacto">Contacto</a>
+			</li>
+		</ul>
+	</nav>
 
+	<main id="fullpage">
+		<header class="section header">
+			<div class="contenedor-titulo">
+				<h1 class="titulo">
+					<span class="texto-naranja">Novi</span> 
+					<span class="texto-blanco">b-rex</span>
+				</h1>
+				<p class="texto-blanco">Nuevo Modelo para Vans</p>
+			</div>
+			<div class="contenedor-icono">
+				<p><a href="#productos" class="texto-blanco"><i class="fas fa-chevron-down"></i></a></p>
+			</div>
+
+			<!-- Video -->
+			<!-- <video loop muted data-autoplay class="bg-video">
+				<source src="media/bg-video.m4v" type="video/mp4">
+			</video> -->
+		</header>
+
+		<section class="section productos">
+			<article class="slide">
+				<div class="informacion-producto">
+					<p class="modelo">
+						<span class="texto-naranja">NikeCourt</span> 
+						<span class="texto-negro">Air</span>
+					</p>
+					<p class="descripcion texto-negro">Lorem, ipsum dolor.</p>
+					<p class="precio">2,800</p>
+				</div>
+			</article>
+			<article class="slide">
+				<div class="informacion-producto">
+					<p class="modelo">
+						<span class="texto-naranja">NikeCourt</span> 
+						<span class="texto-negro">Air</span>
+					</p>
+					<p class="descripcion texto-negro">Lorem, ipsum dolor.</p>
+					<p class="precio">2,800</p>
+				</div>
+			</article>
+			<article class="slide">
+				<div class="informacion-producto">
+					<p class="modelo">
+						<span class="texto-naranja">NikeCourt</span> 
+						<span class="texto-negro">Air</span>
+					</p>
+					<p class="descripcion texto-negro">Lorem, ipsum dolor.</p>
+					<p class="precio">2,800</p>
+				</div>
+			</article>
+		</section>
+
+		<footer class="section footer">
+			<h2 class="texto-naranja">Siguenos en Redes Sociales</h2>
+			<p class="redes-sociales">
+				<a href="#" class="facebook"><i class="fab fa-facebook-square"></i></a>
+				<a href="#" class="twitter"><i class="fab fa-twitter-square"></i></a>
+				<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+			</p>
+		</footer>
+	</main>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
